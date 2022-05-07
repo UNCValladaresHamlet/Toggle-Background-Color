@@ -1,12 +1,13 @@
 // Target / Create Element
+const colors = ["green", "yellow", "red", "blue", "pink" ]
 const button = document.getElementById("button");
 const color = document.querySelector(".color");
-const colors = ["green", "yellow", "red", "blue", "pink" ]
 
 button.addEventListener("click", function () {
     const randomNumber = getRandomNumber();
     console.log(randomNumber)
-
+    document.body.style.backgroundColor = colors[randomNumber];
+    color.textContent = colors[randomNumber];
 })
 
 let getRandomNumber = () => {
